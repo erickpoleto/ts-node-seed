@@ -1,10 +1,30 @@
 {
-   "compileOptions": {
+   "compilerOptions": {
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
       "module": "commonjs",
       "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
       "target": "es6",
+      "esModuleInterop": true,
+      "noImplicitAny": true,
       "moduleResolution": "node",
-      "outDir": "dist"
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "outDir": "../source/dist",
+      "baseUrl": "../source/",
+      "paths": {
+         "*": [
+            "node_modules/*"
+         ],
+         "@controllers/*": ["./app/controllers/*"],
+         "@loaders/*": ["./app/config/*"],
+         "@routes/*": ["./app/routes/*"]
+      }
    },
-   "lib": ["es2020"]
+   "include": [
+      "app/**/*",
+      "config/**/*"
+   ]
 }
+
